@@ -1,0 +1,32 @@
+.customized-color{
+  background-color: #12856f;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+}
+
+.title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.tech {
+  background: linear-gradient(90deg, rgba(111,111,111,1) 0%, rgba(0,0,0,1) 79%);
+}
+
+.games {
+  background: #4a115d;
+}
+
+.japan {
+ background: linear-gradient(90deg, rgba(255,255,255,1) 35%, rgba(255,0,0,1) 50%, rgba(255,255,255,1) 65%);
+ color: black;
+}
+
+.bike {
+ background: #154a12;
+}
+
+.area {
+	resize: none;
+}
