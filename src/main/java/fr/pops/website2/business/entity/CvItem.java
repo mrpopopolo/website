@@ -12,7 +12,7 @@ public class CvItem {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer Id;
+	private Integer id;
 	
 	private String period;
 	
@@ -41,7 +41,11 @@ public class CvItem {
 	}
 
 	public Integer getId() {
-		return Id;
+		return id;
+	}
+	
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public Boolean getType() {

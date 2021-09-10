@@ -1,3 +1,4 @@
+/* Page principal */
 .customized-color{
   background-color: #12856f;
   font-size: 1.2em;
@@ -9,6 +10,8 @@
   font-size: 1.2em;
   font-weight: bold;
 }
+
+/* About me */
 
 .tech {
   background: linear-gradient(90deg, rgba(111,111,111,1) 0%, rgba(0,0,0,1) 79%);
@@ -27,6 +30,16 @@
  background: #154a12;
 }
 
-.area {
+/* Modifier C.V. */
+
+textarea {
 	resize: none;
 }
+
+.cv-form {
+	background-color: antiquewhite;
+	margin-bottom: 20px;
+}
+
+
+

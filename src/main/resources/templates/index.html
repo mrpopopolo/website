@@ -1,55 +1,48 @@
 <!doctype html>
 <html lang="en" xmlns:th="www.thymeleaf.org">
-	<head th:fragment="head">
-		<meta charset="utf-8">
-		<title>Fouzi B</title>
-		<base href="/">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!---------------------------------------LINK CSS ------------------------------------->
-		<link th:href="@{/webjars/bootstrap/4.5.0/css/bootstrap.min.css}" rel="stylesheet">
-		<link th:href="@{style.css}" rel="stylesheet" type="text/css">
-		<!---------------------------------------SCRIPT JS ------------------------------------->			
-		<script th:src="@{/webjars/jquery/3.5.1/jquery.js}"></script>
-		<script th:src="@{/webjars/popper.js/1.16.1/dist/umd/popper.min.js}"></script>
-		<script th:src="@{/webjars/bootstrap/4.5.0/js/bootstrap.js}"></script>
-	</head>
-	<body class="bg-dark">
-		<div class="container">
-			<div class="row">
-		    	<div class="col-md-12">
-		        	<div class="card bg-secondary my-3" th:fragment="navbar">
-		        		<div class="card-body">
-		          			<h2 class="card-title text-center text-white py-2">Fouzi Benmakhlouf</h2>
-		          			<ul class="text-center list-inline py-2">
-		            			<li class="list-inline-item">
-		              				<a th:href="@{/}" class="btn btn-danger">Parcours Professionnel</a>
-		            			</li>
-		            			<li class="list-inline-item">
-		              				<a th:href="@{/about-me}" class="btn btn-success">À propos de moi</a>
-		            			</li>
-		            			<li class="list-inline-item">
-		              				<a th:href="@{/contact-me}" class="btn btn-info">Me contacter</a>
-		            			</li>
-		          			</ul>
-		        		</div>
-		      		</div>
-		      
-		      		<div class="row no-gutters rounded my-1 customized-color text-center">
-			    		<div class="col-2 border-right border-secondary">Période</div>
-			    		<div class="col-8">Titre et description</div>
-			    		<div class="col-2 border-left border-secondary">Compétences</div>
-			  		</div>
-			
-			  		<div th:each="item: ${cv}" class="row no-gutters rounded my-1 text-center" th:classappend="${item.type} ? 'bg-info': 'bg-light'">
-			    		<div class="col-2 border-right border-secondary" th:text="${item.period}"></div>
-			    		<div class="col-8">
-			      			<div class="border-bottom border-secondary" th:text="${item.title}"></div>
-			      			<div class="pt-auto" th:text="${item.description}"></div>
-			    		</div>
-			    		<div class="col-2 border-left border-secondary" th:text="${item.skills}"></div>
-			  		</div>		      
-		    	</div>
-		  	</div>
+<head th:fragment="head">
+  <meta charset="utf-8">
+  <title>Fouzi B</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link th:href="@{/webjars/bootstrap/5.1.0/css/bootstrap.min.css}" rel="stylesheet">
+  <link th:href="@{style.css}" rel="stylesheet" type="text/css">	
+  <script th:src="@{/webjars/jquery/3.5.1/dist/jquery.js}"></script>
+  <script th:src="@{/webjars/bootstrap/5.1.0/js/bootstrap.js}"></script>
+  <script th:src="@{script.js}"></script>
+</head>
+<body class="bg-dark">
+  <div class="container">
+    <div class="row">
+	  <div class="col-md-12">
+	    <div class="card bg-secondary my-3" th:fragment="navbar">
+		  <div class="card-body">
+		    <h2 class="card-title text-center text-white py-2">Fouzi Benmakhlouf</h2>
+		    <ul class="text-center list-inline py-2">
+		      <li class="list-inline-item">
+		        <a th:href="@{/}" class="btn btn-danger">Parcours Professionnel</a>
+		      </li>
+		      <li class="list-inline-item">
+		        <a th:href="@{/about-me}" class="btn btn-success">À propos de moi</a>
+		      </li>
+		    </ul>
+		  </div>
 		</div>
-	</body>
+		<div class="row no-gutters rounded my-1 customized-color text-center">
+		  <div class="col-2 border-right border-secondary">Période</div>
+		  <div class="col-8">Titre et description</div>
+		  <div class="col-2 border-left border-secondary">Compétences</div>
+		</div>
+		<div th:each="item: ${cv}" class="row no-gutters rounded my-1 text-center" th:classappend="${item.type} ? 'bg-info': 'bg-light'">
+		  <div class="col-2 border-right border-secondary" th:text="${item.period}"></div>
+		  <div class="col-8">
+		    <div class="border-bottom border-secondary" th:text="${item.title}"></div>
+		    <div class="pt-auto" th:text="${item.description}"></div>
+		  </div>
+	  	  <div class="col-2 border-left border-secondary" th:text="${item.skills}"></div>
+	    </div>		      
+      </div>
+	</div>
+  </div>
+</body>
 </html>

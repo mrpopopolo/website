@@ -22,4 +22,17 @@ public class CvService {
 				.collect(Collectors.toList());
 	}
 	
+	public void saveCvItem(CvItem cv, Integer id) {
+		if(id != null) cv.setId(id);
+		this.cvRep.save(cv);
+	}
+	
+	public CvItem loadCvItem(Integer id) {
+		return this.cvRep.getOne(id);
+	}
+	
+	public void deleteCvItem(Integer id) {
+		this.cvRep.deleteById(id);
+	}
+	
 }
