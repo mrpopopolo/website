@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* fr.pops.website2.Website2Application
+web: java $JAVA_OPTS -cp target/classes:target/dependency/* fr.pops.website2.Website2Application.java
