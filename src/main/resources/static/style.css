@@ -2,6 +2,7 @@
 .customized-color{
   background-color: #12856f;
   font-size: 1.2em;
+  word-break: break-all;
   font-weight: bold;
   color: white;
 }

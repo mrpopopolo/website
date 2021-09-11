@@ -15,7 +15,7 @@
   <div class="container">
     <div class="row">
 	  <div class="col-md-12">
-	    <div class="card bg-secondary my-3" th:fragment="navbar">
+	    <div class="row card bg-secondary my-3" th:fragment="navbar">
 		  <div class="card-body">
 		    <h2 class="card-title text-center text-white py-2">Fouzi Benmakhlouf</h2>
 		    <ul class="text-center list-inline py-2">
@@ -24,6 +24,9 @@
 		      </li>
 		      <li class="list-inline-item">
 		        <a th:href="@{/about-me}" class="btn btn-success">À propos de moi</a>
+		      </li>
+		      <li sec:authorize="hasAuthority('ROLE_ADMIN')" class="list-inline-item">
+		        <a th:href="@{/logout}" class="btn btn-warning">Se déconnecter</a>
 		      </li>
 		    </ul>
 		  </div>
