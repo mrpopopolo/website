@@ -8,7 +8,8 @@ import org.springframework.context.annotation.ComponentScan;
 	"fr.pops.website2.business.entity",
 	"fr.pops.website2.business.service",
 	"fr.pops.website2.persistence",
-	"fr.pops.website2.presentation"})
+	"fr.pops.website2.presentation",
+	"fr.pops.website2.configuration"})
 @SpringBootApplication
 public class Website2Application {
 

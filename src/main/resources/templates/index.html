@@ -25,6 +25,9 @@
 		      <li class="list-inline-item">
 		        <a th:href="@{/about-me}" class="btn btn-success">À propos de moi</a>
 		      </li>
+		      <li sec:authorize="hasAuthority('ROLE_ADMIN')" class="list-inline-item">
+		        <a th:href="@{/logout}" class="btn btn-warning">Se déconnecter</a>
+		      </li>
 		    </ul>
 		  </div>
 		</div>
