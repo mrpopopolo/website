@@ -11,6 +11,7 @@
 	<groupId>fr.pops</groupId>
 	<artifactId>website2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>website2</name>
 	<description>My first website</description>
 
