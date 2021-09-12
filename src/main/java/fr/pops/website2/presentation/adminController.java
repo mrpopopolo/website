@@ -26,7 +26,13 @@ public class adminController {
 	}
 	
 	@PostMapping("/newItem")
-	public String newItem(CvItem cv, @RequestParam Integer id) {
+	public String newItem(CvItem cv) {
+		this.cvServ.saveCvItem(cv, -1);
+		return "redirect:/backstage/edit-cv";
+	}
+	
+	@PostMapping("/editItem")
+	public String editItem(CvItem cv, @RequestParam Integer id) {
 		this.cvServ.saveCvItem(cv, id);
 		return "redirect:/backstage/edit-cv";
 	}

@@ -6,7 +6,7 @@
     <div class="row">
 	  <div class="col-md-12">
 	    <div th:replace="index :: navbar"></div>
-		<form class="cv-form p-2" method="post" th:object="${cvItem}" th:action="@{/backstage/newItem}">
+		<form class="cv-form p-2" method="post" th:object="${cvItem}" th:action="@{/backstage/editItem}">
 		  <input type="hidden" th:field="*{id}" id="itemId">
 		  <div class="mb-3">
 		    <label for="period" class="form-label">Période</label>

@@ -23,7 +23,7 @@ public class CvService {
 	}
 	
 	public void saveCvItem(CvItem cv, Integer id) {
-		if(id != null) cv.setId(id);
+		if(id != -1) cv.setId(id);
 		this.cvRep.save(cv);
 	}
 	
